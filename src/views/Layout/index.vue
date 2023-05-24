@@ -6,14 +6,16 @@ import LayoutFixed from "./components/LayoutFixed.vue";
 import { useCategoryStore } from "@/stores/category";
 import { onMounted } from "vue";
 
-const  categoryStore=useCategoryStore();
+const categoryStore = useCategoryStore();
 
-onMounted(()=>categoryStore.getCategory())
+onMounted(() => categoryStore.getCategory());
 </script>
 
 <template>
   <LayoutNav />
   <LayoutHeader />
+  <!--添加key 破坏复用机制 强制销毁重建  -->
+  <!-- <RouterView :key="$route.fullPath" /> -->
   <RouterView />
   <LayoutFooter />
   <LayoutFixed></LayoutFixed>
