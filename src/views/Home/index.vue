@@ -16,10 +16,10 @@ import HomePanelVue from "./components/HomePanel.vue";
   <HomeHot />
   <homeProduct />
   <!-- 测试面板组件 -->
-  <HomePanelVue title="新鲜好物" sub-title="新鲜好物 好多商品">
+  <!-- <HomePanelVue title="新鲜好物" sub-title="新鲜好物 好多商品">
     <div>我是新鲜好物的插槽</div>
   </HomePanelVue>
   <HomePanelVue title="人气推荐" sub-title="人气推荐 好多商品">
     <div>我是人气推荐的插槽</div>
-  </HomePanelVue>
+  </HomePanelVue> -->
 </template>
