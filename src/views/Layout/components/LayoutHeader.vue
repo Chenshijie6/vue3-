@@ -3,7 +3,6 @@ import { useCategoryStore } from "@/stores/category";
 
 // 使用pinia数据
 const categoryStore = useCategoryStore();
-
 </script>
 
 <template>
@@ -16,8 +15,12 @@ const categoryStore = useCategoryStore();
         <li class="home">
           <RouterLink to="/">首页</RouterLink>
         </li>
-        <li class="home" v-for="item in categoryStore.categoryList" :key="item.id">
-          <RouterLink to="/">{{ item.name }}</RouterLink>
+        <li
+          class="home"
+          v-for="item in categoryStore.categoryList"
+          :key="item.id"
+        >
+          <RouterLink :to="`/category/${item.id}`">{{ item.name }}</RouterLink>
         </li>
       </ul>
       <div class="search">
