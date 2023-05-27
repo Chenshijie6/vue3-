@@ -2,15 +2,15 @@
 import { useUserStore } from "@/stores/user";
 import { useRouter } from "vue-router";
 const userStore = useUserStore();
-// const router = useRouter();
-// const confirm = () => {
+const router = useRouter();
+const confirm = () => {
 //   console.log("用户要退出登录了");
-//   // 退出登录业务逻辑实现
-//   // 1.清除用户信息 触发action
-//   userStore.clearUserInfo();
-//   // 2.跳转到登录页
-//   router.push("/login");
-// };
+  // 退出登录业务逻辑实现
+  // 1.清除用户信息 触发action
+  userStore.clearUserInfo();
+  // 2.跳转到登录页
+  router.push("/login");
+};
 </script>
 
 <template>
@@ -26,6 +26,7 @@ const userStore = useUserStore();
           </li>
           <li>
             <el-popconfirm
+              @confirm="confirm"
               title="确认退出吗?"
               confirm-button-text="确认"
               cancel-button-text="取消"
