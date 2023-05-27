@@ -7,8 +7,8 @@ import { useUserStore } from "@/stores/user";
 
 const userStore = useUserStore();
 const form = ref({
-  account: "18610848230",
-  password: "123456",
+  account: "heima282",
+  password: "hm#qd@23!",
   agree: true,
 });
 
