@@ -59,12 +59,12 @@ export const useCartStore = defineStore('cart', () => {
     //     cartList.value = []
     // }
 
-    // // 单选功能
-    // const singleCheck = (skuId, selected) => {
-    //     // 通过skuId找到要修改的那一项 然后把它的selected修改为传过来的selected
-    //     const item = cartList.value.find((item) => item.skuId === skuId)
-    //     item.selected = selected
-    // }
+    // 单选功能
+    const singleCheck = (skuId, selected) => {
+        // 通过skuId找到要修改的那一项 然后把它的selected修改为传过来的selected
+        const item = cartList.value.find((item) => item.skuId === skuId)
+        item.selected = selected
+    }
 
     // // 全选功能
     // const allCheck = (selected) => {
@@ -96,7 +96,7 @@ export const useCartStore = defineStore('cart', () => {
         // clearCart,
         addCart,
         delCart,
-        // singleCheck,
+        singleCheck,
         // allCheck,
         // updateNewList
     }
