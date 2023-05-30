@@ -37,7 +37,7 @@ const tabChange = (type) => {
 
 // 页数切换
 const pageChange = (page) => {
-//   console.log(page);
+  //   console.log(page);
   params.value.page = page;
   getOrderList();
 };
@@ -102,7 +102,7 @@ const fomartPayState = (payState) => {
                 </ul>
               </div>
               <div class="column state">
-                <p>{{ order.orderState }}</p>
+                <p>{{ fomartPayState(order.orderState) }}</p>
                 <p v-if="order.orderState === 3">
                   <a href="javascript:;" class="green">查看物流</a>
                 </p>
